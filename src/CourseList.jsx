@@ -14,8 +14,7 @@ const courses = [
   {
     id: 2,
     title: "Design Strategy",
-    description:
-      "lesson on planning design concept and proper planning of work",
+    description: "lesson on planning design concept and proper planning of work",
     imageUrl: "/images/img2.jpg",
     rate: "4",
     tags: ["UI/UX design", "web design"],
@@ -25,8 +24,7 @@ const courses = [
   {
     id: 3,
     title: "Business Lecture",
-    description:
-      "lectures on how to build your buisness safely without fare of new projects",
+    description: "lectures on how to build your buisness safely without fare of new projects",
     imageUrl: "/images/img3.jpg",
     rate: "3.9",
     tags: ["Marketing", "Finance"],
@@ -38,8 +36,11 @@ const courses = [
 function CourseList() {
   return (
     <div className="course-list">
-      {courses.length > 0 &&
-        courses.map((course) => <CourseCard key={course.id} course={course} />)}
+      {courses.map((course)=> {
+        return (
+            <CourseCard/>
+        )
+      })}
     </div>
   );
 }
